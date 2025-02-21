@@ -1,0 +1,267 @@
+/* Style général */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* En-tête */
+header {
+    background-color: #0056A2;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.logo {
+    max-width: 260px;
+}
+
+/* Bouton de retour */
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: #FF6600;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section des catégories */
+.categories {
+    margin: 20px;
+}
+
+.event-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    background-color: #FF6600;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    background-color: #E65100;
+}
+
+/* Galerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Flèches de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+.arrow:hover {
+    background: rgba(255, 102, 0, 0.8);
+    color: white;
+}
+
+/* Pied de page */
+footer {
+    background-color: #0056A2;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Menu burger (Responsive) */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #0056A2;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.nav-menu a:hover {
+    background-color: #FF6600;
+}
+
+/* Afficher le menu quand il est actif */
+.menu-open .nav-menu {
+    display: flex;
+}
+
+/* Adaptation pour mobile et tablette */
+@media screen and (max-width: 600px) {
+    .event-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 80%;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .gallery-item {
+        width: 90%;
+        height: auto;
+    }
+
+    .back-button {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0056A2;
+        padding: 10px 0;
+    }
+    
+    .menu-open .nav-menu {
+        display: flex;
+    }
+}
+
+/* Adaptation pour tablettes */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .event-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Adaptation pour grand écran */
+@media screen and (min-width: 1025px) {
+    .event-grid {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

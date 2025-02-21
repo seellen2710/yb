@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événement 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Événement 1</h1>
+        <a href="index.html" class="back-button">Retour</a>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav-menu">
+            <a href="index.html">Accueil</a>
+            <a href="event1.html">Événement 1</a>
+            <a href="event2.html">Événement 2</a>
+            <a href="event3.html">Événement 3</a>
+            <a href="event4.html">Événement 4</a>
+        </nav>
+    </header>
+
+    <section class="gallery-container">
+        <h2>Photos de l'Événement 1</h2>
+        <p>Découvrez les moments forts de cet événement.</p>
+        
+        <div class="gallery">
+            <figure>
+                <img src="img/photo1.jpg" class="gallery-item" onclick="openLightbox('img/photo1.jpg', 0)" alt="Moment 1">
+                <figcaption>Moment 1</figcaption>
+            </figure>
+            <figure>
+                <img src="img/photo2.jpg" class="gallery-item" onclick="openLightbox('img/photo2.jpg', 1)" alt="Moment 2">
+                <figcaption>Moment 2</figcaption>
+            </figure>
+            <figure>
+                <img src="img/photo3.jpg" class="gallery-item" onclick="openLightbox('img/photo3.jpg', 2)" alt="Moment 3">
+                <figcaption>Moment 3</figcaption>
+            </figure>
+            <figure>
+                <img src="img/photo4.jpg" class="gallery-item" onclick="openLightbox('img/photo4.jpg', 3)" alt="Moment 4">
+                <figcaption>Moment 4</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Lightbox avec flèches de navigation -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <span class="arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <span class="arrow right" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <footer>
+        <p>© 2025 MCCI Business School - Yearbook</p>
+    </footer>
+</body>
+</html>
