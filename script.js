@@ -48,6 +48,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+
+    // Gestion du bouton "Remonter en Haut"
+    window.onscroll = function () {
+        document.getElementById("scrollTopBtn").style.display = window.scrollY > 100 ? "block" : "none";
+    };
+
+    document.getElementById("scrollTopBtn").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Gestion de la musique de fond
+    const musicToggle = document.getElementById("music-toggle");
+    const music = document.getElementById("background-music");
+
+    musicToggle.addEventListener("click", function () {
+        if (music.paused) {
+            music.play();
+            musicToggle.textContent = "🔇 Couper la musique";
+        } else {
+            music.pause();
+            musicToggle.textContent = "🎵 Activer la musique";
+        }
+    });
 });
 
 // Variables pour la gestion des images dans la Lightbox
@@ -83,3 +106,4 @@ function changeImage(direction) {
 
     document.getElementById("lightbox-img").src = images[currentImageIndex].src;
 }
+

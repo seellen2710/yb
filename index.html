@@ -8,13 +8,21 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+ 
+    <header class="fade-in">
         <img src="Logo.png" alt="Logo MCCI" class="logo">
         <h1>Galerie Photo - Yearbook</h1>
     </header>
     
     <main>
-        <section class="categories">
+        <section class="about">
+            <h2>À Propos</h2>
+            <p>Bienvenue sur la Galerie Yearbook de la MCCI Business School ! 📸✨</p>
+            <p>Cette galerie vous permet de revivre les moments forts des événements organisés tout au long de l’année.</p>
+            <p>Découvrez les souvenirs, partagez vos émotions et gardez une trace de cette belle aventure universitaire !</p>
+        </section>
+        
+        <section class="categories fade-in">
             <h2>Nos Événements</h2>
             <div class="event-grid">
                 <a href="event1.html" class="event-card">Événement 1</a>
@@ -28,5 +36,15 @@
     <footer>
         <p>&copy; 2025 MCCI Business School - Tous droits réservés</p>
     </footer>
+
+    <!-- Bouton pour remonter en haut -->
+    <button id="scrollTopBtn">⬆ Remonter</button>
+
+    <!-- Musique de fond -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle">🎵 Activer/Désactiver la musique</button>
+
 </body>
 </html>

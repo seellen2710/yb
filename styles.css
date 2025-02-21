@@ -1,4 +1,4 @@
-/* Style général */
+/* 🌎 Style général */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,7 +7,56 @@ body {
     text-align: center;
 }
 
-/* En-tête */
+/* 🔥 Effet d’apparition fluide */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+
+
+/* 🎵 Musique de fond */
+#music-toggle {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background: #0056A2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#music-toggle:hover {
+    background: #FF6600;
+}
+
+/* ⬆️ Bouton "Remonter en Haut" */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FF6600;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#scrollTopBtn:hover {
+    background: #E65100;
+}
+
+/* 🔵 En-tête */
 header {
     background-color: #0056A2;
     padding: 20px;
@@ -19,7 +68,7 @@ header {
     max-width: 260px;
 }
 
-/* Bouton de retour */
+/* 🔙 Bouton de retour */
 .back-button {
     position: absolute;
     left: 20px;
@@ -31,7 +80,7 @@ header {
     border-radius: 5px;
 }
 
-/* Section des catégories */
+/* 📌 Section des catégories */
 .categories {
     margin: 20px;
 }
@@ -60,7 +109,7 @@ header {
     background-color: #E65100;
 }
 
-/* Galerie */
+/* 🖼️ Galerie */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -75,14 +124,15 @@ header {
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-item:hover {
     transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Lightbox */
+/* 🔎 Lightbox */
 .lightbox {
     display: none;
     position: fixed;
@@ -102,7 +152,7 @@ header {
     max-height: 80%;
 }
 
-/* Bouton de fermeture */
+/* ❌ Bouton de fermeture Lightbox */
 .close {
     position: absolute;
     top: 20px;
@@ -112,7 +162,7 @@ header {
     cursor: pointer;
 }
 
-/* Flèches de navigation */
+/* ➡️ Flèches de navigation */
 .arrow {
     position: absolute;
     top: 50%;
@@ -139,17 +189,17 @@ header {
     color: white;
 }
 
-/* Pied de page */
+/* 🔵 Pied de page */
 footer {
     background-color: #0056A2;
     color: white;
     padding: 10px;
-    position: fixed;
+    position:relative;
     width: 100%;
     bottom: 0;
 }
 
-/* Menu burger (Responsive) */
+/* 🍔 Menu burger (Responsive) */
 .menu-toggle {
     background-color: transparent;
     border: none;
@@ -190,7 +240,7 @@ footer {
     display: flex;
 }
 
-/* Adaptation pour mobile et tablette */
+/* 📱 Adaptation pour mobile et tablette */
 @media screen and (max-width: 600px) {
     .event-grid {
         flex-direction: column;
@@ -232,7 +282,7 @@ footer {
     }
 }
 
-/* Adaptation pour tablettes */
+/* 📱 Adaptation pour tablettes */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .event-grid {
         display: grid;
@@ -245,14 +295,9 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
-
-    .gallery-item {
-        width: 100%;
-        height: auto;
-    }
 }
 
-/* Adaptation pour grand écran */
+/* 🖥️ Adaptation pour grand écran */
 @media screen and (min-width: 1025px) {
     .event-grid {
         display: flex;
@@ -265,3 +310,12 @@ footer {
         justify-content: center;
     }
 }
+
+.about {
+    padding: 50px;
+    background: #f8f8f8;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+

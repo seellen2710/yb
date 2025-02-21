@@ -8,7 +8,8 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
+    
+    <header class="fade-in">
         <h1>Événement 1</h1>
         <a href="index.html" class="back-button">Retour</a>
         <button class="menu-toggle">☰</button>
@@ -21,25 +22,25 @@
         </nav>
     </header>
 
-    <section class="gallery-container">
+    <section class="gallery-container fade-in">
         <h2>Photos de l'Événement 1</h2>
         <p>Découvrez les moments forts de cet événement.</p>
         
         <div class="gallery">
             <figure>
-                <img src="img/photo1.jpg" class="gallery-item" onclick="openLightbox('img/photo1.jpg', 0)" alt="Moment 1">
+                <img src="img/photo1.jpg" class="gallery-item" loading="lazy" onclick="openLightbox('img/photo1.jpg', 0)" alt="Moment 1">
                 <figcaption>Moment 1</figcaption>
             </figure>
             <figure>
-                <img src="img/photo2.jpg" class="gallery-item" onclick="openLightbox('img/photo2.jpg', 1)" alt="Moment 2">
+                <img src="img/photo2.jpg" class="gallery-item" loading="lazy" onclick="openLightbox('img/photo2.jpg', 1)" alt="Moment 2">
                 <figcaption>Moment 2</figcaption>
             </figure>
             <figure>
-                <img src="img/photo3.jpg" class="gallery-item" onclick="openLightbox('img/photo3.jpg', 2)" alt="Moment 3">
+                <img src="img/photo3.jpg" class="gallery-item" loading="lazy" onclick="openLightbox('img/photo3.jpg', 2)" alt="Moment 3">
                 <figcaption>Moment 3</figcaption>
             </figure>
             <figure>
-                <img src="img/photo4.jpg" class="gallery-item" onclick="openLightbox('img/photo4.jpg', 3)" alt="Moment 4">
+                <img src="img/photo4.jpg" class="gallery-item" loading="lazy" onclick="openLightbox('img/photo4.jpg', 3)" alt="Moment 4">
                 <figcaption>Moment 4</figcaption>
             </figure>
         </div>
@@ -56,5 +57,15 @@
     <footer>
         <p>© 2025 MCCI Business School - Yearbook</p>
     </footer>
+
+    <!-- Bouton pour remonter en haut -->
+    <button id="scrollTopBtn">⬆ Remonter</button>
+
+    <!-- Musique de fond -->
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle">🎵 Activer/Désactiver la musique</button>
+
 </body>
 </html>
