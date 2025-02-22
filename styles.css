@@ -17,8 +17,6 @@ body {
     animation: fadeIn 1s ease-out;
 }
 
-
-
 /* 🎵 Musique de fond */
 #music-toggle {
     position: fixed;
@@ -68,23 +66,7 @@ header {
     max-width: 260px;
 }
 
-/* 🔙 Bouton de retour */
-.back-button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    background-color: #FF6600;
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* 📌 Section des catégories */
-.categories {
-    margin: 20px;
-}
-
+/* 📸 Conteneur des événements */
 .event-grid {
     display: flex;
     flex-wrap: wrap;
@@ -92,20 +74,55 @@ header {
     gap: 20px;
 }
 
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 15px;
+}
+
+/* 🔗 Lien contenant l’image + bouton */
+.event-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-link:hover {
+    transform: scale(1.05);
+}
+
+/* 🖼️ Images des événements */
+.event-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🖼️ Effet hover sur l’image */
+.event-link:hover .event-img {
+    opacity: 0.7;
+}
+
+/* 🎟️ Style des boutons événements */
 .event-card {
     background-color: #FF6600;
     color: white;
-    text-decoration: none;
-    padding: 20px;
+    text-align: center;
+    padding: 15px;
     border-radius: 8px;
     width: 200px;
-    text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
 }
 
-.event-card:hover {
-    transform: scale(1.05);
+/* 🟠 Effet hover sur le bouton */
+.event-link:hover .event-card {
     background-color: #E65100;
 }
 
@@ -194,7 +211,7 @@ footer {
     background-color: #0056A2;
     color: white;
     padding: 10px;
-    position:relative;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -235,11 +252,6 @@ footer {
     background-color: #FF6600;
 }
 
-/* Afficher le menu quand il est actif */
-.menu-open .nav-menu {
-    display: flex;
-}
-
 /* 📱 Adaptation pour mobile et tablette */
 @media screen and (max-width: 600px) {
     .event-grid {
@@ -247,15 +259,15 @@ footer {
         align-items: center;
     }
 
+    .event-img {
+        width: 90%;
+        height: auto;
+    }
+
     .event-card {
         width: 80%;
         padding: 15px;
         font-size: 18px;
-    }
-
-    .gallery-item {
-        width: 90%;
-        height: auto;
     }
 
     .back-button {
@@ -310,12 +322,3 @@ footer {
         justify-content: center;
     }
 }
-
-.about {
-    padding: 50px;
-    background: #f8f8f8;
-    text-align: center;
-    border-radius: 10px;
-    margin: 20px;
-}
-
