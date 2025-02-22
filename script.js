@@ -11,23 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Galerie Photo - Yearbook script chargé avec succès");
 
-    // Lazy Loading avancé pour les images
-    let lazyImages = document.querySelectorAll(".lazy");
-
-    let lazyLoad = function () {
-        lazyImages.forEach(img => {
-            if (img.getBoundingClientRect().top < window.innerHeight && img.dataset.src) {
-                img.src = img.dataset.src;
-                img.removeAttribute("data-src");
-                img.classList.remove("lazy");
-            }
-        });
-    };
-
-    window.addEventListener("scroll", lazyLoad);
-    window.addEventListener("resize", lazyLoad);
-    lazyLoad();
-
     // Sélection de toutes les images de la galerie
     const galleryItems = document.querySelectorAll(".gallery-item");
     galleryItems.forEach((item, index) => {
@@ -123,3 +106,4 @@ function changeImage(direction) {
 
     document.getElementById("lightbox-img").src = images[currentImageIndex].src;
 }
+
